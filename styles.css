@@ -1,1 +1,25 @@
 
+.myNav{
+    background-color:#02b5ac;
+    color:white;
+}
+
+.parallax {
+  /* The image used */
+  background-image: url("https://codehs.com/uploads/36b0deead59d1b42a77456c32d71a765");
+
+  /* Set a specific height */
+  min-height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+
+body{
+    background-color:pink;
+}
