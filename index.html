@@ -1,157 +1,159 @@
 <!DOCTYPE html>
-
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>My Website</title>
+    <title>Home | Joann Shaju</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/x-icon" href="https://codehs.com/uploads/76d04a3e003545540ce1db2277a7a264">
+<link rel="icon" type="image/x-icon" href="https://codehs.com/uploads/76d04a3e003545540ce1db2277a7a264">
 </head>
 <body>
-    
-    <div class="container">
-    
-        <nav class="pt-3 pb-3 mt-4 navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">My Website</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarText">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                             <a class="nav-link active" id="home-tab" data-bs-toggle="tab" href="#home" role="tab">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="bio-tab" data-bs-toggle="tab" href="#bio" role="tab">Bio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="projects-tab" data-bs-toggle="tab" href="#projects" role="tab">Projects</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        
-     <script src="https://codehs.com/uploads/36b0deead59d1b42a77456c32d71a765"></script>
-    <div class="parallax"></div>
-    <h1 class="text-center">Welcome!</h1>
-    <div class="parallax"></div>
-       
-        <div class="tab-content border p-4 bg-light rounded" id="nav-tabContent">
-            <div class="tab-pane fade show active" id="home" role="tabpanel">
-                <h3>Home View</h3>
-                <p>Welcome to the home page content area.</p>
-            </div>
-            
-            <div class="tab-pane fade" id="bio" role="tabpanel">
-                <h3>Biography</h3>
-                <p>This is the biography text panel inside your tab container.</p>
-            </div>
-            
-            <div class="tab-pane fade" id="projects" role="tabpanel">
-                <h3>Our Projects</h3>
-                <p>Display your fruits project lists and details right here.</p>
+
+    <!-- Black Navbar with Centered Layout (class="container" instead of container-fluid) -->
+    <nav class="navbar navbar-expand-lg myNav navbar-dark py-3 sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-white d-flex align-items-center gap-2" href="index.html">
+                <i class="bi bi-house-fill"></i> Joann Shaju
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarText">
+                <ul class="navbar-nav d-flex align-items-center gap-3 mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active text-white fw-bold d-flex align-items-center gap-2" href="index.html">
+                            <i class="bi bi-house"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white d-flex align-items-center gap-2" href="Bio.html">
+                            <i class="bi bi-person"></i> Bio
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white d-flex align-items-center gap-2" href="Project.html">
+                            <i class="bi bi-code-slash"></i> Projects
+                        </a>
+                    </li>
+                    <li class="nav-item ms-lg-2">
+                        <button id="themeToggleBtn" class="btn btn-outline-light btn-sm d-flex align-items-center gap-1" onclick="toggleTheme()">
+                            <i id="themeIcon" class="bi bi-moon-fill"></i> <span id="themeLabel">Dark</span>
+                        </button>
+                    </li>
+                </ul>
             </div>
         </div>
-       
-    <script src="https://jsdelivr.net"></script>
-       
-    </body>
+    </nav>
+
+    <main class="container my-5">
+        
+        <div class="parallax rounded my-4"></div>
+        <h1 class="text-center my-4">Welcome!</h1>
+        <div class="parallax rounded my-4"></div>
+
+        <div class="row justify-content-center my-5">
+            <div class="col-md-8">
+                <div id="quoteCard" class="card shadow-sm p-4 text-center border-0">
+                    <h3 class="mb-3"><i class="bi bi-quote text-primary me-2"></i>Inspirational Quote Generator</h3>
+                    <figure class="my-3">
+                        <blockquote class="blockquote">
+                            <p id="quoteText" class="fs-5 italic">"The secret of getting ahead is getting started."</p>
+                        </blockquote>
+                        <figcaption id="quoteAuthor" class="blockquote-footer mt-1">
+                            Mark Twain
+                        </figcaption>
+                    </figure>
+                    <div class="mt-2">
+                        <button class="btn btn-dark btn-sm" onclick="generateQuote()">
+                            <i class="bi bi-shuffle me-1"></i> New Quote
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="mt-5 mb-4">
+        <div class="container footer-box text-center p-3 bg-white text-dark rounded shadow-sm">
+            Created by: Joann Shaju 2026
+            <a href="mailto:joann.sha@lvjusd.org" class="ms-2">Email</a>
+            
+            <div class="mt-2 mb-2">
+                <a class="btn btn-link btn-floating btn-lg text-body m-1"
+                   href="https://granadahigh.livermoreschools.org/"
+                   target="_blank"
+                   role="button">🏫 GHS</a>
+            </div>
+        </div>
+    </footer>
+
+    <button id="backToTopBtn" class="btn btn-dark rounded-circle shadow" onclick="scrollToTop()" title="Go to top">
+        <i class="bi bi-arrow-up-short fs-4"></i>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     
-    <footer> 
-    <p>Created by: Joann Shaju 2026
-    <a href = "https://granadahigh.livermoreschools.org">Granada</a>
-       <a href = "joann.sha@lvjusd.org"></a>
-    </p>
-</footer>
-<footer class="text-center bg-body-tertiary  bg-#FFFFFF">
-  <!-- Grid container -->
-  <div class="container pt-4">
-    <!-- Section: Social media -->
-    <section class="mb-4">
-      <!-- Facebook -->
-      <a
-        data-mdb-ripple-init
-        class="btn btn-link btn-floating btn-lg text-body m-1"
-        href="#!"
-        role="button"
-        data-mdb-ripple-color="dark"
-        ><i class="fab fa-facebook-f"></i
-      ></a>
+    <script>
+        function toggleTheme() {
+            const body = document.body;
+            const themeIcon = document.getElementById('themeIcon');
+            const themeLabel = document.getElementById('themeLabel');
+            const quoteCard = document.getElementById('quoteCard');
 
-      <!-- Twitter -->
-      <a
-        data-mdb-ripple-init
-        class="btn btn-link btn-floating btn-lg text-body m-1"
-        href="#!"
-        role="button"
-        data-mdb-ripple-color="dark"
-        ><i class="fab fa-twitter"></i
-      ></a>
+            body.classList.toggle('dark-mode');
 
-      <!-- Google -->
-      <a
-        data-mdb-ripple-init
-        class="btn btn-link btn-floating btn-lg text-body m-1"
-        href="#!"
-        role="button"
-        data-mdb-ripple-color="dark"
-        ><i class="fab fa-google"></i
-      ></a>
+            if (body.classList.contains('dark-mode')) {
+                themeIcon.className = 'bi bi-sun-fill';
+                themeLabel.textContent = 'Light';
+                if (quoteCard) {
+                    quoteCard.classList.add('bg-secondary', 'text-white');
+                }
+            } else {
+                themeIcon.className = 'bi bi-moon-fill';
+                themeLabel.textContent = 'Dark';
+                if (quoteCard) {
+                    quoteCard.classList.remove('bg-secondary', 'text-white');
+                }
+            }
+        }
 
-      <!-- Instagram -->
-      <a
-        data-mdb-ripple-init
-        class="btn btn-link btn-floating btn-lg text-body m-1"
-        href="#!"
-        role="button"
-        data-mdb-ripple-color="dark"
-        ><i class="fab fa-instagram"></i
-      ></a>
+        const quotes = [
+            { text: "The secret of getting ahead is getting started.", author: "Mark Twain" },
+            { text: "It always seems impossible until it's done.", author: "Nelson Mandela" },
+            { text: "Success is not final, failure is not fatal: it is the courage to continue that counts.", author: "Winston Churchill" },
+            { text: "The only way to do great work is to love what you do.", author: "Steve Jobs" },
+            { text: "Believe you can and you're halfway there.", author: "Theodore Roosevelt" },
+            { text: "“Happiness is not by chance, but by choice.", author: "Jim Rohn" }
+        ];
 
-      <!-- Linkedin -->
-      <a
-        data-mdb-ripple-init
-        class="btn btn-link btn-floating btn-lg text-body m-1"
-        href="#!"
-        role="button"
-        data-mdb-ripple-color="dark"
-        ><i class="fab fa-linkedin"></i
-      ></a>
-      <!-- Github -->
-      <a
-        data-mdb-ripple-init
-        class="btn btn-link btn-floating btn-lg text-body m-1"
-        href="#!"
-        role="button"
-        data-mdb-ripple-color="dark"
-        ><i class="fab fa-github"></i
-      ></a>
-      <a
-        
-        class="btn btn-link btn-floating btn-lg text-body m-1"
-        href="https://granadahigh.livermoreschools.org/"
-        role="button"
-        
-       
-      >🏫 GHS</a>
-      
-    </section>
-    <!-- Section: Social media -->
-  </div>
-  <!-- Grid container -->
+        function generateQuote() {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            document.getElementById('quoteText').textContent = `"${quotes[randomIndex].text}"`;
+            document.getElementById('quoteAuthor').textContent = quotes[randomIndex].author;
+        }
 
-  <!-- Copyright -->
-  <div class="text-center p-3" style="background-color: #FFFFFF;">
-    © 2020 Copyright:
-    <a class="text-body" href="https://mdbootstrap.com/">MDBootstrap.com</a>
-  </div>
-  <!-- Copyright -->
-</footer>
-</div>
-<!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-    </html>
+        const backToTopBtn = document.getElementById("backToTopBtn");
+
+        window.onscroll = function() {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                backToTopBtn.style.display = "block";
+            } else {
+                backToTopBtn.style.display = "none";
+            }
+        };
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+</html>
